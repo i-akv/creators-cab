@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./Sidebar.css";
 
 import {
   RiThumbUpLine,
@@ -6,54 +7,69 @@ import {
   RiUploadLine,
   RiVideoLine,
   RiUploadCloud2Line,
+  RiHistoryLine,
+  RiHome2Line,
 } from "react-icons/ri";
 
 const Sidebar = () => {
-  const styles = {
-    navLink: "grid grid-cols-12 py-2 gap-1 items-center",
-    navLinkIcon: "col-span-2 pl-1 flex text-xl justify-end",
-    navLinkText: "col-span-10 text-lg text-left pl-1",
-  };
   return (
-    <section className="col-span-3 p-2 flex flex-col border-r-2 border-primary h-screen">
+    <section className="sidebar">
       <Link
-        className="text-xl p-2 gap-2 flex justify-center items-center bg-primary text-black"
+        className="text-xl p-2 gap-2 flex justify-center items-center border-primary border border-1 hover:bg-primary text-primary hover:text-black"
         href={"#"}
       >
         <RiUploadLine />
         Upload
       </Link>
 
-      <hr className="mt-2 border-primary" />
+      <hr className="separator" />
 
-      <Link className={styles.navLink} href={"#"}>
-        <div className={styles.navLinkIcon}>
-          <RiThumbUpLine />
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
+          <RiHome2Line />
         </div>
-        <span className={styles.navLinkText}>Liked Videos</span>
+        <span className="sidelinktitle">Home</span>
       </Link>
 
-      <Link className={styles.navLink} href={"#"}>
-        <div className={styles.navLinkIcon}>
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
+          <RiThumbUpLine />
+        </div>
+        <span className="sidelinktitle">Liked Videos</span>
+      </Link>
+
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
           <RiTimeLine />
         </div>
 
-        <span className={styles.navLinkText}>Watch Later</span>
+        <span className="sidelinktitle">Watch Later</span>
       </Link>
 
-      <Link className={styles.navLink} href={"#"}>
-        <div className={styles.navLinkIcon}>
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
           <RiUploadCloud2Line />
         </div>
-        <span className={styles.navLinkText}>Uploads</span>
+        <span className="sidelinktitle">Uploads</span>
       </Link>
 
-      <Link className={styles.navLink} href={"#"}>
-        <div className={styles.navLinkIcon}>
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
           <RiVideoLine />
         </div>
-        <span className={styles.navLinkText}>Subscriptions</span>
+        <span className="sidelinktitle">Subscriptions</span>
       </Link>
+
+      <Link className="sidelink" href={"#"}>
+        <div className="sidelinkicon">
+          <RiHistoryLine />
+        </div>
+        <span className="sidelinktitle">History</span>
+      </Link>
+
+      <hr className="separator" />
+
+
     </section>
   );
 };

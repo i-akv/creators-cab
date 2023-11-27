@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar {
+  @apply col-span-3 lg:col-span-2 p-2 hidden md:flex flex-col border-primary;
+}
+
+.separator {
+  @apply my-2 border-primary;
+}
+
+.sidelink {
+  @apply grid grid-cols-12 py-2 gap-1 items-center; 
+  @apply hover:bg-primary hover:text-black duration-100;
+}
+
+.sidelinkicon {
+    @apply col-span-3 pl-1 flex text-xl justify-end;
+}
+
+.sidelinktitle {
+    @apply col-span-9 text-lg text-left pl-1;
+}

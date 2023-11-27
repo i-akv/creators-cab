@@ -1,0 +1,20 @@
+.videoDetails {
+    position: relative;
+}
+
+.videoStats {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15%;
+    right: 5%;
+    border: 1px solid var(--secondaryColor);
+    padding: 2px;
+    width: 40%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.253);
+    backdrop-filter: blur(10px);
+    @apply rounded-lg text-[10px] md:text-[13px]
+}
