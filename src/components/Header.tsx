@@ -1,4 +1,6 @@
 import { RiMenu4Fill, RiMic2Line, RiSearch2Line, RiUser4Line } from "react-icons/ri";
+import {useSession} from "next-auth/react"
+import SigninButton from "./auth/SigninButton";
 
 const Header = () => {
   const styles = {
@@ -11,6 +13,7 @@ const Header = () => {
       <button className={styles.button}>
         <RiMenu4Fill />
       </button>
+      
       <div className="searchContainer gap-2 col-span-10 grid-cols-12 grid">
         <div className={styles.searchBox}>
           <input
@@ -26,9 +29,9 @@ const Header = () => {
             <RiMic2Line />
         </button>
       </div>
-      <button className={styles.button+" hidden md:flex justify-center items-center col-span-1"}>
-        <RiUser4Line />
-      </button>
+      <div className={styles.button+"  hidden md:flex justify-center items-center col-span-1"}>
+      <SigninButton />
+      </div>
     </header>
   );
 };
